@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const LINKS = [
   { href: "#/", label: "Home", route: "/" },
+  { href: "#/study", label: "AI study tools", route: "/study" },
   { href: "#/planner", label: "Planner", route: "/planner" },
   { href: "#/dashboard", label: "Dashboard", route: "/dashboard" },
 ];

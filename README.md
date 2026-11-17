@@ -119,3 +119,19 @@ Do not commit `node_modules/`. Include the generated lockfile after running `npm
 ## Acknowledgements and limitations
 
 Bootstrap is distributed under the MIT License and is installed as an npm dependency. React, React DOM, and Vite are third-party open-source dependencies listed in `package.json`. StudySprout uses no public API or paid service. The local sign-in is a client-side demonstration only and must not be used to protect sensitive information.
+
+## AI study tools on Vercel
+
+Import the full project into Vercel. The included vercel.json builds the UI
+and serves the server-side function at /api/study.
+
+Create an API key at https://aistudio.google.com/apikey using a Free Tier
+project. Add GEMINI_API_KEY under Vercel Settings > Environment Variables for
+Production and any Preview environments that need AI. Deploy or redeploy after
+adding the key. Keep it server-side and outside Git.
+
+Open AI study tools and generate a reviewer from a short topic to verify the
+deployment. Flashcards, quizzes, explanations and summaries share the same
+Gemini quota. Keep billing disabled on the Google project for free-tier-only
+usage. Google may use free-tier input to improve its products. Use Vercel Dev
+to test the function locally.

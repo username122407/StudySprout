@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif&display=swap");
+
+.journey-home {
+  background: #171333;
+  color: #fff9f2;
+  font-family: "DM Sans", sans-serif;
+}
+
+.journey-home .app-main {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+.journey-home .site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  border: 0;
+  background: linear-gradient(#171333e8, #17133300);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.journey-home .navbar {
+  max-width: none;
+  padding: 1rem 4vw;
+}
+
+.journey-home .brand-mark,
+.journey-home .navbar .nav-link,
+.journey-home .navbar .nav-link.active {
+  color: #fff9f2;
+}
+
+.journey-home .brand-icon {
+  display: none;
+}
+
+.journey-home .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.journey-home .theme-toggle {
+  border: 1px solid #fff9f270;
+  border-radius: 0;
+  background: transparent;
+}
+
+.study-journey {
+  display: grid;
+  grid-template-rows: 23fr 43fr 34fr;
+  min-height: max(1440px, 170vw);
+  background: #171333 url("../../css/studysprout-landscape.webp") center / 100% 100% no-repeat;
+}
+
+.journey-intro,
+.journey-scene {
+  align-self: start;
+  margin-inline: 4vw;
+  text-shadow: 0 2px 12px #120d27d9;
+}
+
+.journey-intro {
+  padding-top: clamp(6rem, 10vw, 11rem);
+  max-width: 52vw;
+}
+
+.study-journey h1,
+.study-journey h2 {
+  margin: 0 0 .45em;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
+  line-height: .92;
+  letter-spacing: -.035em;
+}
+
+.study-journey h1 {
+  font-size: clamp(4rem, 10vw, 11rem);
+}
+
+.study-journey h2 {
+  font-size: clamp(2.8rem, 5.5vw, 6.5rem);
+}
+
+.study-journey p {
+  max-width: 33ch;
+  margin-bottom: 1.1rem;
+  color: #fff9f2;
+  line-height: 1.5;
+}
+
+.study-journey a,
+.study-journey button {
+  color: inherit;
+}
+
+.study-journey .journey-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.8rem;
+  padding: .8rem 1.15rem;
+  background: #fff9f2;
+  color: #171333;
+  text-decoration: none;
+  text-shadow: none;
+  font-size: .9rem;
+}
+
+.journey-scene {
+  align-self: center;
+  width: min(35vw, 34rem);
+}
+
+.journey-planning {
+  justify-self: end;
+}
+
+.journey-scene h2::after {
+  display: block;
+  width: min(65%, 12rem);
+  height: 1px;
+  margin-top: .45em;
+  background: #fff9f280;
+  content: "";
+}
+
+.journey-scene a::before {
+  display: inline-block;
+  margin-right: .6em;
+  content: "—";
+}
+
+.journey-scene button {
+  display: block;
+  margin-top: 1rem;
+  padding: .4rem .7rem;
+  border: 1px solid #fff9f270;
+  background: #171333a0;
+}
+
+.journey-home .app-footer {
+  border-color: #fff9f230;
+  background: #171333;
+  color: #fff9f2;
+}
+
+@media (max-width: 767px) {
+  .study-journey {
+    min-height: 1280px;
+    background-size: auto 100%;
+    background-position: 51% center;
+  }
+
+  .journey-home .navbar-collapse {
+    padding: .5rem 1rem;
+    background: #171333;
+  }
+
+  .journey-intro,
+  .journey-scene {
+    width: auto;
+    max-width: 85%;
+    margin-inline: 6vw;
+  }
+
+  .journey-intro p,
+  .journey-scene {
+    padding: .7rem;
+    background: #171333c9;
+  }
+}

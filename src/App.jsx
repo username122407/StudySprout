@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage.jsx";
 import Navigation from "./components/Navigation.jsx";
 import TaskForm from "./components/TaskForm.jsx";
 import TaskList from "./components/TaskList.jsx";
+import StudyTools from "./components/StudyTools.jsx";
 import TaskToolbar from "./components/TaskToolbar.jsx";
 import {
   filterAndSortTasks,
@@ -112,7 +113,7 @@ function readInitialTasks() {
 
 function routeFromHash() {
   const route = window.location.hash.replace(/^#/, "");
-  return route === "/planner" || route === "/dashboard" ? route : "/";
+  return route === "/planner" || route === "/dashboard" || route === "/study" ? route : "/";
 }
 
 export default function App() {
@@ -416,7 +417,7 @@ export default function App() {
   }).length;
 
   return (
-    <div className="app-shell">
+    <div className={route === "/" ? "app-shell journey-home" : "app-shell"}>
       <Navigation
         currentRoute={route}
         theme={theme}
@@ -445,6 +446,7 @@ export default function App() {
         {route === "/" && (
           <HomePage onLoadSamples={loadSamples} hasTasks={tasks.length > 0} />
         )}
+        {route === "/study" && <StudyTools />}
         {route === "/dashboard" && (
           <Dashboard tasks={tasks} summary={summary} dueSoon={dueSoon} />
         )}
